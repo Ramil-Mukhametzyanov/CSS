@@ -6,6 +6,8 @@
     width: 400px;
     margin: 10% auto;
     transform: skew(-10deg, 10deg);
+    border: 1px dotted black;
+    border-radius: 5px;
    }
    .caraA{
     background-image: url("descarga.png");
