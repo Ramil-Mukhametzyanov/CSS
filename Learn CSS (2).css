@@ -1,0 +1,44 @@
+   body {
+    backgound-color: #efefef; 
+   }
+   .cartas{
+    display: block;
+    width: 400px;
+    margin: 10% auto;
+    transform: skew(-10deg, 10deg);
+   }
+   .caraA{
+    background-image: url("descarga.png");
+    width: 225px;
+    height: 225px;
+    animation: cartaA 2s infinite linear;
+    position: absolute;
+   }
+   .caraB{
+    background-image: url("descarga1.png");
+    width: 225px;
+    height: 225px;
+    animation: cartaB 2s infinite linear;
+   }
+   @keyframes cartaA{
+    0%, 25% {
+     transform: rotateY(90deg);
+    }
+    50% {
+     transform: rotateY(0deg);
+    }
+    75%, 100% {
+     transform: rotateY(90deg);
+    }
+   }
+   @keyframes cartaB{
+    0%{
+     transform: rotateY(0deg);
+    }
+    25%, 75% {
+     transform: rotateY(90deg);
+    }
+    100% {
+     transform: rotateY(0deg);
+    }
+   }
