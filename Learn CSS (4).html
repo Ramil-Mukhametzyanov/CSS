@@ -1,0 +1,61 @@
+<html>
+ <head>
+  <link rel="stylesheet" type="text/css" href="Learn CSS (4).css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ </head>
+ <body>
+  <div id="wrapper">
+   <button id="callModal" onclick="callmodal();">I wiki you.<br>Press!</button>
+    <div id="blackwall">
+     <div id="modal">
+      <div id="modal-header">
+       <h1>Who is Rakitin? Do you know?</h1>
+       <a class="hider">[X]</a>
+      </div>
+      <div class="modal-body">
+       <p>
+Rakitin, of course, was a person of tooo little consecuense to be invited to the dinner, 
+
+to which Father Iosif, Father Paissy, and one othr monk were the only inmates of the 
+
+monastery invited. They were alraedy waiting when Miusov, Kalganov, and Ivan arrived. The 
+
+other guest, Maximov, stood a little aside, waiting also. The Father Superior stepped into 
+
+the middle of the room to receive his guests. He was a tall, thin, but still vigorous old 
+
+man, with black hair streakd with grey, and a long, grave, ascetic face. He bowed to his 
+
+guests in silence. But this time they approaced to receive his blessing. Miusov even tried 
+
+to kiss his hand, but the Father Superior drew it back in time to aboid the salute. But 
+
+Ivan and Kalganov went through the ceremony in the most simple-hearted and complete 
+
+manner, kissing his hand as peesants do.
+      </p>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script>
+function callmodal(){
+ $('#blackwall').fadeIn(500, function(){
+  $("#modal").css({
+   'transform': 'scale(1,1)'
+   });
+   $('body').addClass('blockScroll');
+ });
+}
+$('a.hider').on('click',function(){
+ $('#modal').css({
+  'transform': 'scale(0,0)'
+ });
+ setTimeout(function(){
+  $('#blackwall').fadeOut(500);
+  $('body').removeClass('blockScroll');
+ },300);
+});
+  </script>
+ </body>
+</html>
