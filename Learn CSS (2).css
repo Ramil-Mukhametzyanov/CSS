@@ -6,8 +6,6 @@
     width: 400px;
     margin: 10% auto;
     transform: skew(-10deg, 10deg);
-    border: 1px dotted black;
-    border-radius: 5px;
    }
    .caraA{
     background-image: url("descarga.png");
@@ -15,12 +13,16 @@
     height: 225px;
     animation: cartaA 2s infinite linear;
     position: absolute;
+    border: 1px dotted black;
+    border-radius: 5px;
    }
    .caraB{
     background-image: url("descarga1.png");
     width: 225px;
     height: 225px;
     animation: cartaB 2s infinite linear;
+    border: 1px dotted black;
+    border-radius: 5px;
    }
    @keyframes cartaA{
     0%, 25% {
