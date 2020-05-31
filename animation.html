@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div.g3{
+  animation-iteration-count: infinite;
+  animation-duration: 13s;
+  animation-delay: -9s;
+  animation-name: rotate;
+  position: absolute;
+}
+@keyframes rotate {
+ 0{transform:rotate(0deg);}
+ 96%{transform:rotate(0deg);}
+ 97%{transform:rotate(90deg);}
+ 98%{transform:rotate(180deg);}
+ 99%{transform:rotate(270deg);}
+ 100%{transform:rotate(360deg);}
+}
+
+div.g2{
+  animation-iteration-count: infinite;
+  animation-duration: 0.05s;
+  animation-name: quack2;
+  animation-direction: alternate;
+  position: absolute;
+  left: 10px;
+}
+@keyframes quack2 {
+ from{left: 10px;}
+ to{left: 15px;}
+}
+
+div.g{
+  animation-iteration-count: infinite;
+  animation-duration: 0.19s;
+  animation-name: quack;
+  animation-direction: alternate;
+  position: absolute;
+  top: 10px;
+}
+@keyframes quack {
+ from{top: 0px;}
+ to{top: -10px;}
+}
+div.b{
+  top: 0px;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: red;
+  animation-duration: 9s;
+  z-index: -1;
+  opacity: 0;
+  animation-iteration-count: infinite;
+}
+div#a1{  animation-name: example4;
+animation-delay: 3s;}
+div#a2{  animation-name: example4;
+animation-delay: 5s;}
+div#a3{  animation-name: example3;}
+div#a4{  animation-name: example4;}
+
+@keyframes example1 {
+  from {background-color: red;top: 0px; height: 50px; width: 50px;opacity: 0;
+  animation-timing-function: steps(10, end)	;
+  
+}
+  25% {background-color: red;top: 0px; height: 50px; width: 500px;opacity: 0.5;
+  animation-timing-function: ease-in-out	;
+  
+}
+  50% {background-color: red;top: 80px;  width: 500px;height: 10px;opacity: 0.5;
+animation-timing-function:ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1)	  ;
+}
+  75% {background-color: yellow;top: 80px;  width: 500px;height: 10px;opacity: 0.5;
+animation-timing-function:linear	  ;
+}
+
+  to {background-color: yellow;top: 80px;  width: 500px;height: 10px;opacity: 1;
+}
+}
+
+@keyframes example2 {
+  from {background-color: red;top: 0px; height: 50px; width: 50px;opacity: 0;
+animation-timing-function:ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1)	    
+}
+  to {background-color: yellow;top: 80px;  width: 500px;height: 10px;opacity: 1;
+}
+}
+@keyframes example3 {
+  from {background-color: red;top: 0px; height: 50px; width: 50px;opacity: 0;
+  animation-timing-function: steps(10, end)	;
+   
+}
+  to {background-color: yellow;top: 80px;  width: 500px;height: 10px;opacity: 1;
+}
+}
+
+@keyframes example4 {
+  0% {transform:rotate(-45deg);background-color: red;top: 0px; height: 50px; width: 50px;opacity: 0;
+  animation-timing-function: ease;
+   
+}
+  50% {transform:rotate(-135deg); transform: translate(225px,70px);background-color: orange;top: 0px; height: 50px; width: 50px;opacity: 0.5;
+  animation-timing-function: ease;
+   
+}
+  100% {transform:rotate(0deg);background-color: yellow;top: 80px;  width: 500px;height: 10px;opacity: 1;
+}
+}
+</style>
+</head>
+<body>
+
+<p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+<div class=g2>
+<div class=g>
+<div class=b id=a1></div>
+</div>
+</div>
+<div class=g3>
+<div class=g2>
+<div class=g>
+<div class=b id=a2></div>
+</div>
+</div>
+</div>
+<div class=g3>
+<div class=g>
+<div class=b id=a4></div>
+</div>
+</div>
+</div>
+
+<p><b>Note:</b> When an animation is finished, it changes back to its original style.</p>
+
+</body>
+</html>
